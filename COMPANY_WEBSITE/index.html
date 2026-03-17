@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="404ButWeFound builds fast, modern, professional websites for businesses, creators, and startups."
+    />
+    
+    <!-- Open Graph / Social Meta Tags -->
+    <meta property="og:title" content="404ButWeFound — Websites That Actually Get Found" />
+    <meta property="og:description" content="Modern websites built for businesses, creators, and startups. Fast, clean, and reliable." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://404butwefound.com/" />
+    <!-- Recommended to add an og:image like <meta property="og:image" content="https://404butwefound.com/assets/og-image.jpg" /> -->
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="404ButWeFound — Websites That Actually Get Found" />
+    <meta name="twitter:description" content="Modern websites built for businesses, creators, and startups. Fast, clean, and reliable." />
+
+    <!-- Favicons (Placeholders to avoid 404s, add real ones later) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <title>404ButWeFound — Websites That Actually Get Found</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Google tag (gtag.js) - Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+  </head>
+  <body>
+    <div id="tsparticles"></div>
+
+    <!-- Background Animated Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle Dark Mode" data-magnetic>
+      <span class="sun-icon">☀️</span>
+      <span class="moon-icon">🌙</span>
+    </button>
+
+    <!-- Live Visitor Counter (Subtle UI) -->
+    <div id="live-visitor" class="visitor-counter">
+      <span class="pulse-dot"></span>
+      <span id="visitor-count">12</span> people viewing now
+    </div>
+
+    <!-- Exit Intent Popup -->
+    <div id="exit-intent-popup" class="modal">
+      <div class="modal-content card">
+        <button class="modal-close" id="close-popup" aria-label="Close popup">&times;</button>
+        <h2>Wait! Before you go...</h2>
+        <p>Want a **FREE** audit of your current website's performance and SEO?</p>
+        <a href="#contact" class="btn btn-primary" id="popup-cta">Get My Free Audit</a>
+      </div>
+    </div>
+
+    <!-- AI Chat Assistant Bubble -->
+    <div id="chat-assistant" class="chat-bubble-container">
+      <div id="chat-window" class="chat-window card">
+        <div class="chat-header">
+          <span>AI Assistant</span>
+          <button id="close-chat" aria-label="Close chat">&times;</button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+          <div class="msg bot">Hey 👋 Need a website that actually gets found?</div>
+        </div>
+        <div class="chat-input-area">
+          <input type="text" id="chat-input" placeholder="Type a message..." />
+          <button id="send-chat-msg" aria-label="Send message">➔</button>
+        </div>
+      </div>
+      <button id="chat-toggle" class="chat-toggle-btn" aria-label="Chat with us" data-magnetic>
+        <span class="chat-icon">💬</span>
+      </button>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container" aria-hidden="true">
+      <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
+
+
+
+    <a class="skip-link" href="#home">Skip to content</a>
+
+    <header class="nav-wrap" id="top">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="#home" aria-label="404ButWeFound home">
+          <span class="brand-mark animated-gradient-text" aria-hidden="true">404</span>
+          <span class="brand-name">ButWeFound</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="nav-links"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#about" data-magnetic>About</a>
+          <a href="#meaning" data-magnetic>Why the name</a>
+          <a href="#services" data-magnetic>Services</a>
+          <a href="#portfolio" data-magnetic>Portfolio</a>
+          <a href="#pricing" data-magnetic>Pricing</a>
+          <a href="#calculator" data-magnetic>Calculator</a>
+          <a href="#contact" class="nav-cta" data-magnetic>Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="pill">
+              <span class="dot" aria-hidden="true"></span>
+              Modern web development for growing brands
+            </div>
+            <h1 id="hero-title">Websites That Actually Get Found.</h1>
+            <p class="subheadline" id="hero-subtitle">
+              Modern websites built for businesses, creators, and startups.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#pricing" data-magnetic>View Pricing</a>
+              <a class="btn btn-ghost" href="#contact" data-magnetic>Contact Us</a>
+            </div>
+            <div class="hero-metrics">
+              <div class="metric">
+                <div class="metric-value">Fast</div>
+                <div class="metric-label">Performance-first builds</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">Clean</div>
+                <div class="metric-label">SaaS-grade UI/UX</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">Reliable</div>
+                <div class="metric-label">Support that stays</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-art reveal" aria-hidden="true" data-tilt>
+            <div class="glass-card">
+              <div class="glass-top">
+                <div class="status">
+                  <span class="status-dot"></span>
+                  Live preview
+                </div>
+                <div class="mini-pills">
+                  <span>SEO</span>
+                  <span>Speed</span>
+                  <span>AI</span>
+                </div>
+              </div>
+              <div class="glass-body">
+                <div class="fake-chart">
+                  <div class="bar b1"></div>
+                  <div class="bar b2"></div>
+                  <div class="bar b3"></div>
+                  <div class="bar b4"></div>
+                  <div class="bar b5"></div>
+                </div>
+                <div class="fake-lines">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line short"></div>
+                </div>
+              </div>
+              <div class="glass-footer">
+                <div class="chip">Core Web Vitals: Great</div>
+                <div class="chip chip-outline">Launch-ready</div>
+              </div>
+            </div>
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>About</h2>
+            <p>
+              404ButWeFound helps businesses and individuals build fast, modern,
+              and professional websites designed to grow their online presence.
+            </p>
+          </div>
+
+          <div class="grid-4">
+            <article class="feature-card reveal" data-tilt>
+              <div class="icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M13 2L3 14h7l-1 8 12-14h-7l-1-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>Performance focused</h3>
+              <p>
+                Lean pages, fast load times, and a smooth experience across all
+                devices.
+              </p>
+            </article>
+
+            <article class="feature-card reveal" data-tilt>
+              <div class="icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 7a4 4 0 014-4h8a4 4 0 014 4v10a4 4 0 01-4 4H8a4 4 0 01-4-4V7zm4-2a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2H8z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M8 9h8v2H8V9zm0 4h6v2H8v-2z"
+                    fill="currentColor"
+                    opacity="0.85"
+                  />
+                </svg>
+              </div>
+              <h3>Modern UI/UX</h3>
+              <p>
+                Clean layouts, strong hierarchy, and subtle motion inspired by
+                modern SaaS sites.
+              </p>
+            </article>
+
+            <article class="feature-card reveal" data-tilt>
+              <div class="icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2a7 7 0 017 7v3l2 3v1H3v-1l2-3V9a7 7 0 017-7zm0 20a3 3 0 01-2.995-2.824L9 19h6a3 3 0 01-3 3z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>Reliable support</h3>
+              <p>
+                We stay responsive after launch with fixes, updates, and
+                guidance.
+              </p>
+            </article>
+
+            <article class="feature-card reveal" data-tilt>
+              <div class="icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2l1.5 5.2L19 9l-5.2 1.5L12 16l-1.8-5.5L5 9l5.5-1.8L12 2z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M6 14l.9 3.2L10 18l-3.1.9L6 22l-1-3.1L2 18l3-1L6 14z"
+                    fill="currentColor"
+                    opacity="0.85"
+                  />
+                </svg>
+              </div>
+              <h3>Smart AI integrations</h3>
+              <p>
+                Add helpful AI features like chat, lead qualification, and
+                content workflows.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="meaning">
+        <div class="container">
+          <div class="meaning-wrap reveal">
+            <div class="meaning-copy">
+              <h2>Why 404ButWeFound?</h2>
+              <p>
+                The name is inspired by the famous internet error “404 - Page Not
+                Found”. Many businesses struggle to be found online or don't
+                have a proper website.
+              </p>
+              <p>
+                <strong>404ButWeFound</strong> represents the idea that even when
+                something seems missing online, we help businesses get discovered
+                with a modern and professional website.
+              </p>
+              <div class="bullets">
+                <div class="bullet">
+                  <span class="check" aria-hidden="true"></span>
+                  Solving digital problems
+                </div>
+                <div class="bullet">
+                  <span class="check" aria-hidden="true"></span>
+                  Helping businesses get found online
+                </div>
+                <div class="bullet">
+                  <span class="check" aria-hidden="true"></span>
+                  Turning errors into opportunities
+                </div>
+              </div>
+            </div>
+
+            <div class="meaning-card" aria-hidden="true" data-tilt>
+              <div class="code-top">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="code-body">
+                <div class="code-line">
+                  <span class="muted">GET</span> /your-business
+                </div>
+                <div class="code-line error">
+                  <span class="muted">404</span> not found
+                </div>
+                <div class="code-line ok">
+                  <span class="muted">200</span> found with 404ButWeFound
+                </div>
+                <div class="code-line small muted">
+                  Faster. Cleaner. Search-ready.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Services</h2>
+            <p>
+              Everything you need to launch a professional web presence—built on
+              a clean, modern foundation.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="service-card reveal" data-tilt>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 5a3 3 0 013-3h10a3 3 0 013 3v14a3 3 0 01-3 3H7a3 3 0 01-3-3V5zm3-1a1 1 0 00-1 1v14a1 1 0 001 1h10a1 1 0 001-1V5a1 1 0 00-1-1H7z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M8 7h8v2H8V7zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"
+                    fill="currentColor"
+                    opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <h3>Business Websites</h3>
+              <p>
+                Trust-building sites with clear messaging, strong CTAs, and
+                conversion-focused layouts.
+              </p>
+            </article>
+
+            <article class="service-card reveal" data-tilt>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2a5 5 0 015 5v1h2a3 3 0 013 3v7a4 4 0 01-4 4H6a4 4 0 01-4-4v-7a3 3 0 013-3h2V7a5 5 0 015-5zm-3 6h6V7a3 3 0 00-6 0v1z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>Portfolio Websites</h3>
+              <p>
+                Polished personal portfolios for designers, developers, creators,
+                and freelancers.
+              </p>
+            </article>
+
+            <article class="service-card reveal" data-tilt>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 6a5 5 0 0110 0h4v4h-2.1l-1.2 9.2A3 3 0 0114.7 22H9.3a3 3 0 01-2.97-2.8L5.1 10H3V6h4zm2 0h6a3 3 0 00-6 0z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>E-commerce Websites</h3>
+              <p>
+                Product catalogs, carts, and checkout flows designed for clarity
+                and sales.
+              </p>
+            </article>
+
+            <article class="service-card reveal" data-tilt>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2l3 6 6 .9-4.5 4.4 1.1 6.2L12 16.9 6.4 19.5l1.1-6.2L3 8.9 9 8l3-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>Website Redesign</h3>
+              <p>
+                Upgrade outdated sites with modern UI, better performance, and a
+                clearer user journey.
+              </p>
+            </article>
+
+            <article class="service-card reveal" data-tilt>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm1 4v5l4 2-.9 1.8L11 13V7z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>Website Maintenance</h3>
+              <p>
+                Ongoing fixes, updates, content changes, and monitoring to keep
+                everything running smoothly.
+              </p>
+            </article>
+
+            <article class="service-card reveal" data-tilt>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2c3.3 0 6 2.7 6 6v1h1a3 3 0 013 3v3a3 3 0 01-3 3h-1v1a6 6 0 01-12 0v-1H5a3 3 0 01-3-3v-3a3 3 0 013-3h1V8c0-3.3 2.7-6 6-6zm-4 8v9a4 4 0 008 0v-9H8z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>AI Website Features</h3>
+              <p>
+                AI chatbots, smart forms, and automation—carefully integrated to
+                improve leads and support.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="portfolio">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Portfolio</h2>
+            <p>
+              Professional example projects (sample work) to showcase style,
+              quality, and range.
+            </p>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="project-card reveal" data-tilt>
+              <div class="project-shot shot-1">
+                <img
+                  src="assets/greenleaf-cafe.png"
+                  alt="GreenLeaf Cafe Website screenshot"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="shot-badge">Screenshot</div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>GreenLeaf Cafe Website</h3>
+                  <span class="tag">Restaurant Website</span>
+                </div>
+                <p>
+                  Modern restaurant website with online menu, reservation system,
+                  and mobile-friendly layout.
+                </p>
+                <div style="margin-top: 16px;">
+                  <a href="#" class="btn btn-ghost" style="padding: 8px 16px; min-height: auto; font-size: 14px;" data-magnetic>View Live</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-tilt>
+              <div class="project-shot shot-2">
+                <img
+                  src="assets/novafit-gym.png"
+                  alt="NovaFit Gym Website screenshot"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="shot-badge">Screenshot</div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>NovaFit Gym Website</h3>
+                  <span class="tag">Fitness Business Website</span>
+                </div>
+                <p>
+                  Gym website with membership plans, trainer profiles, and
+                  schedule booking.
+                </p>
+                <div style="margin-top: 16px;">
+                  <a href="#" class="btn btn-ghost" style="padding: 8px 16px; min-height: auto; font-size: 14px;" data-magnetic>View Live</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-tilt>
+              <div class="project-shot shot-3">
+                <img
+                  src="assets/urbanstyle-store.png"
+                  alt="UrbanStyle Clothing Store screenshot"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="shot-badge">Screenshot</div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>UrbanStyle Clothing Store</h3>
+                  <span class="tag">E-commerce Website</span>
+                </div>
+                <p>
+                  Fashion e-commerce store with product catalog, shopping cart,
+                  and checkout.
+                </p>
+                <div style="margin-top: 16px;">
+                  <a href="#" class="btn btn-ghost" style="padding: 8px 16px; min-height: auto; font-size: 14px;" data-magnetic>View Live</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-tilt>
+              <div class="project-shot shot-4">
+                <img
+                  src="assets/brightsmile-dental.png"
+                  alt="BrightSmile Dental Clinic website screenshot"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="shot-badge">Screenshot</div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>BrightSmile Dental Clinic</h3>
+                  <span class="tag">Medical Website</span>
+                </div>
+                <p>
+                  Clean and professional dental clinic website with appointment
+                  booking.
+                </p>
+                <div style="margin-top: 16px;">
+                  <a href="#" class="btn btn-ghost" style="padding: 8px 16px; min-height: auto; font-size: 14px;" data-magnetic>View Live</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-tilt>
+              <div class="project-shot shot-5">
+                <img
+                  src="assets/techspark-landing.png"
+                  alt="TechSpark Startup Landing Page screenshot"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="shot-badge">Screenshot</div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>TechSpark Startup Landing Page</h3>
+                  <span class="tag">Startup Landing Page</span>
+                </div>
+                <p>
+                  High-conversion landing page for a SaaS startup.
+                </p>
+                <div style="margin-top: 16px;">
+                  <a href="#" class="btn btn-ghost" style="padding: 8px 16px; min-height: auto; font-size: 14px;" data-magnetic>View Live</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-tilt>
+              <div class="project-shot shot-6">
+                <img
+                  src="assets/freelancer-portfolio.png"
+                  alt="Freelancer Portfolio Website screenshot"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="shot-badge">Screenshot</div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>Freelancer Portfolio Website</h3>
+                  <span class="tag">Personal Portfolio</span>
+                </div>
+                <p>
+                  Portfolio website for a designer showcasing projects and
+                  services.
+                </p>
+                <div style="margin-top: 16px;">
+                  <a href="#" class="btn btn-ghost" style="padding: 8px 16px; min-height: auto; font-size: 14px;" data-magnetic>View Live</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-tilt>
+              <div class="project-shot shot-7">
+                <img
+                  src="assets/creative-agency.png"
+                  alt="Creative Agency Website"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="shot-badge">Screenshot</div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>Creative Agency Website</h3>
+                  <span class="tag">Business Website</span>
+                </div>
+                <p>
+                  Bold agency site with case studies, team section, and project gallery.
+                </p>
+                <div style="margin-top: 16px;">
+                  <a href="#" class="btn btn-ghost" style="padding: 8px 16px; min-height: auto; font-size: 14px;" data-magnetic>View Live</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-tilt>
+              <div class="project-shot shot-8">
+                <img
+                  src="assets/tech-dashboard.png"
+                  alt="Tech Company Dashboard"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="shot-badge">Screenshot</div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>Tech Company Dashboard</h3>
+                  <span class="tag">Web App UI</span>
+                </div>
+                <p>
+                  Clean dashboard and landing page for a software company.
+                </p>
+                <div style="margin-top: 16px;">
+                  <a href="#" class="btn btn-ghost" style="padding: 8px 16px; min-height: auto; font-size: 14px;" data-magnetic>View Live</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="center reveal">
+            <a class="btn btn-ghost" href="#contact" data-magnetic>View More Projects</a>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section" id="social-proof">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Trusted by Growing Brands</h2>
+            <p>Don't just take our word for it. Here's what our clients have to say.</p>
+          </div>
+
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-4); margin-bottom: var(--space-6);">
+            <div class="card reveal" style="text-align: center; padding: var(--space-5);">
+              <div class="counter-value" data-target="150" style="font-size: 48px; font-weight: 800; color: var(--brand); line-height: 1;">0</div>
+              <div style="margin-top: var(--space-2); color: var(--text); font-weight: 600;">Projects Completed</div>
+            </div>
+            <div class="card reveal" style="text-align: center; padding: var(--space-5);">
+              <div class="counter-value" data-target="98" style="font-size: 48px; font-weight: 800; color: var(--brand2); line-height: 1;">0</div>
+              <div style="margin-top: var(--space-2); color: var(--text); font-weight: 600;">Happy Clients</div>
+            </div>
+          </div>
+
+          <div class="grid-3 testimonials-grid">
+            <article class="card reveal" data-tilt>
+              <div style="display:flex; gap: 4px; color: #ffc44d; margin-bottom: var(--space-2);">★★★★★</div>
+              <p style="font-size: 16px; font-style: italic; margin-bottom: var(--space-3);">"404ButWeFound completely transformed our online presence. Our new site is fast, modern, and perfectly captures our brand. Highly recommended!"</p>
+              <div style="display: flex; align-items: center; gap: var(--space-2); margin-top: auto;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--brand); color:#0b1020; display:flex; align-items:center; justify-content:center; font-weight: 800;">A</div>
+                <div>
+                  <div style="font-weight: 700; font-size: 15px;">Aditi Sharma</div>
+                  <div style="font-size: 13px; color: var(--muted2);">CEO, TechSpark</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card reveal" data-tilt>
+              <div style="display:flex; gap: 4px; color: #ffc44d; margin-bottom: var(--space-2);">★★★★★</div>
+              <p style="font-size: 16px; font-style: italic; margin-bottom: var(--space-3);">"We needed a clean, professional portfolio and they delivered beyond our expectations. Communication was excellent throughout."</p>
+              <div style="display: flex; align-items: center; gap: var(--space-2); margin-top: auto;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--brand2); color:#fff; display:flex; align-items:center; justify-content:center; font-weight: 800;">R</div>
+                <div>
+                  <div style="font-weight: 700; font-size: 15px;">Rahul Desai</div>
+                  <div style="font-size: 13px; color: var(--muted2);">Founder, UrbanStyle</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card reveal" data-tilt>
+              <div style="display:flex; gap: 4px; color: #ffc44d; margin-bottom: var(--space-2);">★★★★★</div>
+              <p style="font-size: 16px; font-style: italic; margin-bottom: var(--space-3);">"The AI features they integrated saved us hours of customer support time. Their maintenance plan is also a lifesaver."</p>
+              <div style="display: flex; align-items: center; gap: var(--space-2); margin-top: auto;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--brand3); color:#0b1020; display:flex; align-items:center; justify-content:center; font-weight: 800;">N</div>
+                <div>
+                  <div style="font-weight: 700; font-size: 15px;">Dr. Neha Kapoor</div>
+                  <div style="font-size: 13px; color: var(--muted2);">Director, BrightSmile Dental</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Pricing</h2>
+            <p class="muted">
+              Pricing can vary depending on project complexity and client
+              requirements.
+            </p>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="pricing-card reveal">
+              <div class="pricing-head">
+                <h3>Starter Plan</h3>
+                <div class="price">₹1000 – ₹2000 <span>Starting</span></div>
+              </div>
+              <ul class="list">
+                <li>1 Page Website</li>
+                <li>Mobile Responsive</li>
+                <li>Basic Design</li>
+                <li>AI Feature Option</li>
+                <li>Contact Form</li>
+                <li>Basic Setup</li>
+              </ul>
+              <a class="btn btn-ghost" href="#calculator" data-magnetic>Estimate cost</a>
+            </article>
+
+            <article class="pricing-card pricing-popular reveal">
+              <div class="popular-badge" aria-label="Most popular">Most Popular</div>
+              <div class="pricing-head">
+                <h3>Business Plan</h3>
+                <div class="price">₹3000 – ₹4000</div>
+              </div>
+              <ul class="list">
+                <li>Up to 5 Pages</li>
+                <li>Custom Design</li>
+                <li>Mobile Responsive</li>
+                <li>AI Feature Option</li>
+                <li>Contact Forms</li>
+                <li>SEO Optimization</li>
+                <li>Basic Marketing Tools</li>
+              </ul>
+              <a class="btn btn-primary" href="#contact" data-magnetic>Start a project</a>
+            </article>
+
+            <article class="pricing-card reveal">
+              <div class="pricing-head">
+                <h3>Pro Plan</h3>
+                <div class="price">₹5000 <span>and above</span></div>
+              </div>
+              <ul class="list">
+                <li>Up to 10 Pages</li>
+                <li>Fully Custom Design</li>
+                <li>Advanced SEO</li>
+                <li>AI Feature Option</li>
+                <li>Marketing Included (Free)</li>
+                <li>Website Management Included (Free for 30 Days)</li>
+                <li>Performance Optimization</li>
+                <li>Priority Support</li>
+              </ul>
+              <a class="btn btn-ghost" href="#calculator" data-magnetic>Estimate cost</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="addons">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Add-ons</h2>
+            <p>Flexible upgrades you can add to any project.</p>
+          </div>
+
+          <div class="addons-grid">
+            <div class="addon-group reveal">
+              <h3>Available for all plans</h3>
+              <div class="addon-list">
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">Extra Page</div>
+                    <div class="addon-desc">Add more pages beyond your plan.</div>
+                  </div>
+                  <div class="addon-price">₹500</div>
+                </div>
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">AI Chatbot Integration</div>
+                    <div class="addon-desc">Basic AI chatbot for FAQs and leads.</div>
+                  </div>
+                  <div class="addon-price">₹1000</div>
+                </div>
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">Advanced Contact Forms</div>
+                    <div class="addon-desc">Multi-step forms with better lead capture.</div>
+                  </div>
+                  <div class="addon-price">₹300</div>
+                </div>
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">One-Day Website Repair</div>
+                    <div class="addon-desc">Quick fixes for urgent site issues.</div>
+                  </div>
+                  <div class="addon-price">₹500</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="addon-group reveal">
+              <h3>Business + Pro</h3>
+              <div class="addon-list">
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">SEO Optimization Upgrade</div>
+                    <div class="addon-desc">Better on-page SEO improvements.</div>
+                  </div>
+                  <div class="addon-price">₹650</div>
+                </div>
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">Social Media Integration</div>
+                    <div class="addon-desc">Embed feeds and profile links.</div>
+                  </div>
+                  <div class="addon-price">₹100</div>
+                </div>
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">Analytics Dashboard</div>
+                    <div class="addon-desc">Track traffic and key actions.</div>
+                  </div>
+                  <div class="addon-price">₹500</div>
+                </div>
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">Blog System</div>
+                    <div class="addon-desc">Add a simple blog for content marketing.</div>
+                  </div>
+                  <div class="addon-price">₹600</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="addon-group reveal">
+              <h3>Only for Pro</h3>
+              <div class="addon-list">
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">E-commerce Store Setup</div>
+                    <div class="addon-desc">Full store setup and configuration.</div>
+                  </div>
+                  <div class="addon-price">₹700</div>
+                </div>
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">Custom Admin Dashboard</div>
+                    <div class="addon-desc">Manage content with a tailored dashboard.</div>
+                  </div>
+                  <div class="addon-price">₹500</div>
+                </div>
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">Advanced AI Features</div>
+                    <div class="addon-desc">Automation and advanced AI workflows.</div>
+                  </div>
+                  <div class="addon-price">₹1500</div>
+                </div>
+                <div class="addon-item">
+                  <div>
+                    <div class="addon-title">Monthly Website Management</div>
+                    <div class="addon-desc">Ongoing updates and support per month.</div>
+                  </div>
+                  <div class="addon-price">₹1000 / month</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="calculator">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Website Price Calculator</h2>
+            <p>Estimate a project cost instantly. You can request this exact setup.</p>
+          </div>
+
+          <div class="calc-grid">
+            <form class="calc card reveal" id="calc-form">
+              <div class="field">
+                <label for="plan">Plan</label>
+                <select id="plan" name="plan">
+                  <option value="starter">Starter</option>
+                  <option value="business" selected>Business</option>
+                  <option value="pro">Pro</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="pages">Number of pages: <span id="pages-val">5</span></label>
+                <input
+                  id="pages"
+                  name="pages"
+                  type="range"
+                  min="1"
+                  max="50"
+                  value="5"
+                  class="range-slider"
+                />
+                <div class="hint" id="pages-hint"></div>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="field">
+                <div class="label-row">
+                  <label>Add-ons</label>
+                  <button class="link-btn" type="button" id="clear-addons">
+                    Clear
+                  </button>
+                </div>
+                <div class="addons-checklist" id="addons-checklist">
+                  <label class="check-item">
+                    <input type="checkbox" data-addon="aiChatbot" />
+                    <span class="check-text">
+                      <span class="check-title">AI Chatbot Integration</span>
+                      <span class="check-desc">Basic AI chatbot for FAQs and leads.</span>
+                    </span>
+                    <span class="check-price">₹1000</span>
+                  </label>
+                  <label class="check-item">
+                    <input type="checkbox" data-addon="advForms" />
+                    <span class="check-text">
+                      <span class="check-title">Advanced Contact Forms</span>
+                      <span class="check-desc">Multi-step forms with better lead capture.</span>
+                    </span>
+                    <span class="check-price">₹300</span>
+                  </label>
+                  <label class="check-item">
+                    <input type="checkbox" data-addon="oneDayRepair" />
+                    <span class="check-text">
+                      <span class="check-title">One-Day Website Repair</span>
+                      <span class="check-desc">Quick fixes for urgent site issues.</span>
+                    </span>
+                    <span class="check-price">₹500</span>
+                  </label>
+                  <label class="check-item" data-availability="business,pro">
+                    <input type="checkbox" data-addon="seoUpgrade" />
+                    <span class="check-text">
+                      <span class="check-title">SEO Optimization Upgrade</span>
+                      <span class="check-desc">Better on-page SEO improvements.</span>
+                    </span>
+                    <span class="check-price">₹650</span>
+                  </label>
+                  <label class="check-item" data-availability="business,pro">
+                    <input type="checkbox" data-addon="socialIntegration" />
+                    <span class="check-text">
+                      <span class="check-title">Social Media Integration</span>
+                      <span class="check-desc">Embed feeds and profile links.</span>
+                    </span>
+                    <span class="check-price">₹100</span>
+                  </label>
+                  <label class="check-item" data-availability="business,pro">
+                    <input type="checkbox" data-addon="analyticsDash" />
+                    <span class="check-text">
+                      <span class="check-title">Analytics Dashboard</span>
+                      <span class="check-desc">Track traffic and key actions.</span>
+                    </span>
+                    <span class="check-price">₹500</span>
+                  </label>
+                  <label class="check-item" data-availability="business,pro">
+                    <input type="checkbox" data-addon="blogSystem" />
+                    <span class="check-text">
+                      <span class="check-title">Blog System</span>
+                      <span class="check-desc">Add a simple blog for content marketing.</span>
+                    </span>
+                    <span class="check-price">₹600</span>
+                  </label>
+                  <label class="check-item" data-availability="pro">
+                    <input type="checkbox" data-addon="ecomSetup" />
+                    <span class="check-text">
+                      <span class="check-title">E-commerce Store Setup</span>
+                      <span class="check-desc">Full store setup and configuration.</span>
+                    </span>
+                    <span class="check-price">₹700</span>
+                  </label>
+                  <label class="check-item" data-availability="pro">
+                    <input type="checkbox" data-addon="adminDash" />
+                    <span class="check-text">
+                      <span class="check-title">Custom Admin Dashboard</span>
+                      <span class="check-desc">Manage content with a tailored dashboard.</span>
+                    </span>
+                    <span class="check-price">₹500</span>
+                  </label>
+                  <label class="check-item" data-availability="pro">
+                    <input type="checkbox" data-addon="advAI" />
+                    <span class="check-text">
+                      <span class="check-title">Advanced AI Features</span>
+                      <span class="check-desc">Automation and advanced AI workflows.</span>
+                    </span>
+                    <span class="check-price">₹1500</span>
+                  </label>
+                  <label class="check-item" data-availability="pro">
+                    <input type="checkbox" data-addon="monthlyMgmt" />
+                    <span class="check-text">
+                      <span class="check-title">Monthly Website Management</span>
+                      <span class="check-desc">Ongoing updates and support per month.</span>
+                    </span>
+                    <span class="check-price">₹1000</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="total">
+                <div>
+                  <div class="total-label">Estimated Total Price</div>
+                  <div class="total-value" id="total">₹0</div>
+                  <div class="total-sub" id="total-sub"></div>
+                </div>
+                <button class="btn btn-primary" type="button" id="request-website">
+                  Request This Website
+                </button>
+              </div>
+            </form>
+
+            <aside class="card reveal">
+              <h3>How estimates work</h3>
+              <p class="muted">
+                This calculator gives a quick estimate using a starting plan
+                price and optional add-ons. Final pricing depends on design
+                complexity, content, integrations, and timelines.
+              </p>
+              <div class="mini-grid">
+                <div class="mini">
+                  <div class="mini-title">Extra pages</div>
+                  <div class="mini-text">
+                    If you choose more pages than included in the plan, we add
+                    ₹500 per extra page.
+                  </div>
+                </div>
+                <div class="mini">
+                  <div class="mini-title">Plan limits</div>
+                  <div class="mini-text">
+                    Some add-ons are only available on Business/Pro or Pro.
+                  </div>
+                </div>
+                <div class="mini">
+                  <div class="mini-title">Fast replies</div>
+                  <div class="mini-text">
+                    Request your estimate and we’ll respond with next steps.
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="why">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Why Choose Us</h2>
+            <p>Simple, focused, and built to help you grow.</p>
+          </div>
+
+          <div class="grid-5">
+            <article class="why-card reveal">
+              <div class="why-icon" aria-hidden="true">⚡</div>
+              <h3>Fast Delivery</h3>
+              <p>Clear timelines and quick iterations to launch sooner.</p>
+            </article>
+            <article class="why-card reveal">
+              <div class="why-icon" aria-hidden="true">₹</div>
+              <h3>Affordable Pricing</h3>
+              <p>Transparent plans with optional add-ons when needed.</p>
+            </article>
+            <article class="why-card reveal">
+              <div class="why-icon" aria-hidden="true">◆</div>
+              <h3>Modern Design</h3>
+              <p>Clean visuals, strong readability, and premium feel.</p>
+            </article>
+            <article class="why-card reveal">
+              <div class="why-icon" aria-hidden="true">AI</div>
+              <h3>AI Powered Features</h3>
+              <p>Smart enhancements that improve leads and support.</p>
+            </article>
+            <article class="why-card reveal">
+              <div class="why-icon" aria-hidden="true">✓</div>
+              <h3>Reliable Support</h3>
+              <p>Help after launch for updates, fixes, and improvements.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Contact</h2>
+            <p>Tell us what you want to build—let’s make it real.</p>
+          </div>
+
+          <div class="contact-grid">
+            <form class="card reveal" id="contact-form">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+              <div class="field">
+                <label for="service">What do you need?</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="Website Development">Website Development</option>
+                  <option value="Website Redesign">Website Redesign</option>
+                  <option value="Bug Fix / Small Changes">Bug Fix / Small Changes</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="budget">Budget</label>
+                <select id="budget" name="budget" required>
+                  <option value="" disabled selected>Select a range</option>
+                  <option value="Under ₹5,000">Under ₹5,000</option>
+                  <option value="₹5,000 - ₹15,000">₹5,000 - ₹15,000</option>
+                  <option value="₹15,000+">₹15,000+</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Send Message</button>
+                <span class="form-note" id="form-note">We usually respond within 24 hours.</span>
+              </div>
+            </form>
+
+            <aside class="card reveal">
+              <h3>Reach us directly</h3>
+              <div class="contact-list">
+                <a class="contact-item" href="tel:+919156062010" data-magnetic>
+                  <span class="contact-ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.3 22 2 13.7 2 3c0-.6.4-1 1-1h3.8c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.4 0 .8-.3 1.1l-2.2 2.2z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    <span class="contact-title">Phone</span>
+                    <span class="contact-value">+91 9156062010</span>
+                  </span>
+                </a>
+
+                <a class="contact-item" href="mailto:shiven.thakur2005@gmail.com" data-magnetic>
+                  <span class="contact-ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V9l8 5 8-5v9z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    <span class="contact-title">Email</span>
+                    <span class="contact-value">shiven.thakur2005@gmail.com</span>
+                  </span>
+                </a>
+
+                <a
+                  class="contact-item"
+                  href="https://instagram.com/404butwefound2025"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-magnetic
+                >
+                  <span class="contact-ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm10 2H7a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.8a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"
+                        fill="currentColor"
+                        opacity="0.9"
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    <span class="contact-title">Instagram</span>
+                    <span class="contact-value">@404butwefound2025</span>
+                  </span>
+                </a>
+
+
+              </div>
+
+              <div class="contact-actions">
+                <a class="btn btn-ghost" href="tel:+919156062010" data-magnetic>Call Now</a>
+                <a class="btn btn-ghost" href="mailto:shiven.thakur2005@gmail.com" data-magnetic>Email Us</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="brand footer-brand-row">
+            <span class="brand-mark" aria-hidden="true">404</span>
+            <span class="brand-name">ButWeFound</span>
+          </div>
+          <p class="muted">
+            Fast, modern websites for businesses, creators, and startups.
+          </p>
+          <div class="footer-links-inline">
+            <a href="tel:+919156062010">+91 9156062010</a>
+            <a href="mailto:shiven.thakur2005@gmail.com">Email</a>
+            <a
+              href="https://instagram.com/404butwefound2025"
+              target="_blank"
+              rel="noreferrer"
+              >Instagram</a
+            >
+
+          </div>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-title">Navigate</div>
+            <a href="#about" data-magnetic>About</a>
+            <a href="#services" data-magnetic>Services</a>
+            <a href="#portfolio" data-magnetic>Portfolio</a>
+            <a href="#pricing" data-magnetic>Pricing</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-title">Get started</div>
+            <a href="#calculator" data-magnetic>Price Calculator</a>
+            <a href="#contact" data-magnetic>Contact</a>
+            <a href="#top" data-magnetic>Back to top</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span class="muted">© <span id="year"></span> 404ButWeFound. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script>
+      (function() {
+        var base = window.location.href.replace(/[^/]+$/, '');
+        document.querySelectorAll('.project-shot img').forEach(function(img) {
+          var s = img.getAttribute('src');
+          if (s && s.indexOf('assets/') === 0) { img.src = base + s; }
+          img.onerror = function() { this.style.opacity = '0'; };
+        });
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.3/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
